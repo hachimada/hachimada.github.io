@@ -1,0 +1,94 @@
+body {
+  font-family: Arial, sans-serif;
+  margin-left: 20%;
+  margin-right: 15%;
+  background-color: rgb(239, 239, 239);
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.profile-picture {
+  margin-right: 20px;
+  max-width: 200px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.profile-picture {
+  /* 円形　中央 */
+  text-align: center;
+}
+.profile-picture img {
+  max-width: 200px;
+}
+
+h1 {
+  color: #333;
+}
+
+#introduction,
+.small-text {
+  font-size: smaller;
+}
+section {
+  margin-bottom: 20px;
+}
+
+h2,
+h3 {
+  color: #555;
+}
+
+p,
+li {
+  color: #777;
+}
+p {
+  margin-bottom: 2px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.work-history {
+  margin-bottom: 10px;
+  max-width: 90%;
+}
+
+.work-history .history {
+  display: flex;
+  border-bottom-style: 1px solid;
+  border-bottom-color: #333;
+}
+.work-history .history .year {
+  width: 20%;
+}
+.work-history .history .work {
+  width: 80%;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 1000px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: smaller;
+  }
+  .top {
+    flex-direction: column;
+    width: 100%;
+  }
+}
