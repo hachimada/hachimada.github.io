@@ -1,68 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nao Yamada</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pVnHcZQp2twLxLQK1gBFePjKzI7p5OjG2xUJg/0VQ+E3vv7Sp5eK9b8WZ2JsYQGk5Bd/3bg+U2h0jBbEX8bOqA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="top">
       <div class="profile-picture">
-        <img src="images/me.jpg" />
+        <img src="images/me.jpg" alt="Nao Yamadaの写真" />
       </div>
 
-      <div class="discription">
+      <div class="description">
         <h1>Nao Yamada</h1>
         <p id="introduction">
-          I'm passionate about topics like AI, Data Science, Robotics, and
-          Systems Engineering. During my time in graduate school, I was involved
-          in robotics and AI research, where I worked on constructing human
-          state recognition models using graph neural networks. Currently, I
-          work as a backend engineer at a SaaS company, primarily coding in Java
-          and Python.
+          システムエンジニアリング、AI、データサイエンス、ロボティクス、などの分野に興味があります。
+          大学院在学中は、ロボティクスとAIの分野で、グラフニューラルネットワークを用いた人間の状態認識モデルの研究を行いました。
+          SaaS企業でバックエンドエンジニアとして主にJavaを使ったwebアプリの開発をした後、機械学習エンジニアとして、画像系の識別AIモデルの開発を行っています。
+          生成系AIにも興味があり勉強中です。
         </p>
-        <p></p>
       </div>
     </div>
 
     <section>
-      <h2>Contoribution</h2>
-      <h3>Sride</h3>
+      <h2>Education & Work History</h2>
+      <div class="work-history">
+        <div class="history">
+          <p class="year">Feb 2024</p>
+          <p class="work">Machine Learning Engineer</p>
+        </div>
+        <div class="history">
+          <p class="year">Apr 2022</p>
+          <p class="work">Web Application Backend Engineer</p>
+        </div>
+        <div class="history">
+          <p class="year">Mar 2022</p>
+          <p class="work">
+            Master of Engineering in Mechanical System
+          </p>
+        </div>
+        <div class="history">
+          <p class="year">Mar 2020</p>
+          <p class="work">
+            Bachelor of Engineering in Mechanical System
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>概要</th>
+            <th>詳細</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>図面記号検出AIモデル開発</td>
+            <td>
+              <ul>
+                <li>図面中の記号を検出するためのモデル（物体検出）を開発。</li>
+                <li>モデル開発では学習、評価、レポート作成、レポーティングを担当。</li>
+                <li>クラスの偏りやデータのドメイン的な特徴を考慮して独自の前処理やデータ拡張を実施することでベースラインモデルからの精度向上を実現した。</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Python</li>
+                <li>Pytorch</li>
+                <li>YOLOX</li>
+                <li>VSCode</li>
+                <li>GitHub</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>肌異常の検出AIモデル&API開発</td>
+            <td>
+              <ul>
+                <li>顔の肌異常を検出するためのモデル（セマンティックセグメンテーション）の精度向上に取り組んだ。</li>
+                <li>モデル開発ではデータセットのアノテーション基準の策定、学習、評価、レポート作成、レポーティングまで一貫して担当。</li>
+                <li>Data-centricなアプローチを取り、モデルのチューニングとアノテーションの改善を繰り返すことで精度向上に成功した。</li>
+                <li>FastAPIを使って、学習が完了したモデルの推論用API開発も担当した。</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Python</li>
+                <li>Pytorch</li>
+                <li>FastAPI</li>
+                <li>Pycharm</li>
+                <li>GitHub</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>バッチ処理ライブラリの独自実装への置き換え</td>
+            <td>
+              <ul>
+                <li>Spring Batchで行われていたバッチ処理の独自実装への置き換えを担当。</li>
+                <li>マルチスレッドや複雑なトランザクション処理が絡んでいたため、既存の挙動との比較を慎重に行いながら詳細設計、開発、テストを実施した。</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Spring Batch</li>
+                <li>IntelliJ</li>
+                <li>GitHub</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>大容量のPDFファイルを生成&ダウンロード機能の開発</td>
+            <td>
+              <ul>
+                <li>大量のユーザーデータをPDFに変換しダウンロードする機能をメモリ効率を重視して開発。</li>
+                <li>サーバーでzipファイルのデータを部分的に生成しながらAWS S3のmulti part uploadで順次アップロードすることで、サーバーのメモリ消費を抑えながら大容量データの処理を実現した。</li>
+                <li>Multi part uploadでは最終的にzipファイルが完成するように部分的なデータをスタックしていく必要があり、zipの仕様に従って部分的なデータ生成する処理の実現が開発のポイントとなった。</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>AWS S3</li>
+                <li>IntelliJ</li>
+                <li>GitHub</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>他システムとの連携のためのAPI開発</td>
+            <td>
+              <ul>
+                <li>別システムから呼び出されるAPIの設計・実装・テストを担当。</li>
+                <li>呼び出し側の要件を考慮し、モックを活用した早期テスト環境の提供や信頼性向上に努めた。</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>IntelliJ</li>
+                <li>GitLab</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category java">
+          <i class="fab fa-java"></i>
+          <h3>Java</h3>
+          <div class="skills-list">
+            <p class="skill-item">Spring Boot</p>
+            <p class="skill-item">Spring Batch</p>
+            <p class="skill-item">JUnit5</p>
+            <p class="skill-item">Gradle</p>
+          </div>
+        </div>
+
+        <div class="skill-category python">
+          <i class="fab fa-python"></i>
+          <h3>Python</h3>
+          <div class="skills-list">
+            <p class="skill-item">Django</p>
+            <p class="skill-item">FastAPI</p>
+            <p class="skill-item">SQLAlchemy</p>
+            <p class="skill-item">Alembic</p>
+            <p class="skill-item">pytest</p>
+            <p class="skill-item">Poetry</p>
+            <p class="skill-item">PyTorch</p>
+            <p class="skill-item">scikit-learn</p>
+          </div>
+        </div>
+
+        <div class="skill-category database">
+          <i class="fas fa-database"></i>
+          <h3>データベース・ミドルウェア</h3>
+          <div class="skills-list">
+            <p class="skill-item">PostgreSQL</li>
+            <p class="skill-item">Redis</li>
+            <p class="skill-item">ROS</li>
+          </div>
+        </div>
+
+        <div class="skill-category version-control">
+          <i class="fas fa-code-branch"></i>
+          <h3>バージョン管理・コンテナ</h3>
+          <div class="skills-list">
+            <p class="skill-item">GitLab</p>
+            <p class="skill-item">GitHub</p>
+            <p class="skill-item">Docker</p>
+          </div>
+        </div>
+
+        <div class="skill-category cicd">
+          <i class="fas fa-cogs"></i>
+          <h3>CI/CDツール</h3>
+          <div class="skills-list">
+            <p class="skill-item">GitLab CI</p>
+            <p class="skill-item">GitHub Actions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contribution</h2>
+      <h3>Published</h3>
       <ul>
         <li>
-          <a href="https://speakerdeck.com/hachimada"> Speaker Deck </a>
-        </li>
-      </ul>
-      <h3>GPTs</h3>
-      <ul>
-        <li>
-          <a href="https://chat.openai.com/g/g-t7Xod66my-ying-wen-jie-shuo"
-            >英文解説</a
-          >
-          <p class="small-text">
-            When you input English sentences, phrases, or words, it provides
-            translations, explanations of sentence structures and used phrases,
-            discussions on how to use the phrases, meanings by part of speech,
-            and example sentences.
-          </p>
+          <a href="https://speakerdeck.com/hachimada">Speaker Deck</a>
         </li>
         <li>
-          <a href="https://chat.openai.com/g/g-t7Xod66my-ying-wen-jie-shuo"
-            >英単語解説</a
-          >
-          <p class="small-text">
-            The output includes the meaning, example sentences, synonyms, and
-            antonyms of English words, categorized by part of speech.
-          </p>
+          <a href="https://zenn.dev/hachimada">Zenn</a>
         </li>
       </ul>
       <h3>Research</h3>
       <ul>
         <li>
           <a href="https://ijain.org/index.php/IJAIN/article/view/903/0">
-            An efficient activity recognition for homecare robots from
-            multi-modal communication dataset
+            An efficient activity recognition for homecare robots from multi-modal communication dataset
           </a>
           <p class="small-text">
             This paper is a compilation of my master's thesis, which Yani
@@ -82,60 +260,6 @@
             Comfort of receiving
           </a>
         </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education & Work History</h2>
-      <div class="work-history">
-        <div class="history">
-          <p class="year">Feb 2024</p>
-          <p class="work">Worked at FastLabel as AI engineer</p>
-        </div>
-        <div class="history">
-          <p class="year">Apr 2022</p>
-          <p class="work">
-            Worked at RAKUS Co., Ltd. as web application backend engineer
-          </p>
-        </div>
-        <div class="history">
-          <p class="year">Mar 2022</p>
-          <p class="work">
-            Master of Engineering in Mechanical System, Tokyo Metoropolitan
-            University
-          </p>
-        </div>
-        <div class="history">
-          <p class="year">Mar 2020</p>
-          <p class="work">
-            Bachelor of Engineering in Mechanical System, Tokyo Metoropolitan
-            University
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>web application development</li>
-        <li>AI model construction</li>
-        <li>statistical analysis</li>
-        <li>data analysis and visualization</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Language, Library, Framework, Dev Tools</h2>
-      <ul>
-        <li>Java, Python</li>
-        <li>Spring Boot, Django, FastAPI</li>
-        <li>Pytorch, scikit learn</li>
-        <li>Junit5, pytest</li>
-        <li>gradle, poetry</li>
-        <li>PostgreSQL</li>
-        <li>GitLab, GitHub</li>
-        <li>GitLab CI, Github Actions</li>
       </ul>
     </section>
 
