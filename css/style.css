@@ -270,7 +270,7 @@ section p a:hover {
 }
 
 /* レスポンシブデザイン */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .top {
     flex-direction: column;
     align-items: center;
@@ -304,5 +304,153 @@ section p a:hover {
 
   .skills-list {
     justify-content: center;
+  }
+} */
+
+
+@media (max-width: 768px) {
+  /* 全体の余白をスマホ向けに調整 */
+  body {
+    padding: 10px;
+    margin: 0;
+  }
+
+  /* トップセクションのレイアウト調整 */
+  .top {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-picture {
+    margin: 0 auto 20px auto;
+    max-width: 120px;
+  }
+
+  .profile-picture img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .description h1 {
+    font-size: 1.5em;
+  }
+
+  #introduction {
+    font-size: 0.9em;
+    padding: 0 10px;
+  }
+
+  /* 学歴・職歴の調整 */
+  .history {
+    flex-direction: column;
+  }
+
+  .history .year {
+    width: auto;
+    margin-bottom: 5px;
+  }
+
+  .history .work {
+    padding-left: 0;
+  }
+
+  /* プロジェクトテーブルの文字サイズ調整 */
+  table th,
+  table td {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  /* テクニカルスキルのグリッド調整 */
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category {
+    padding: 15px;
+  }
+
+  .skill-category i {
+    font-size: 1.5em;
+  }
+
+  .skill-category h3 {
+    font-size: 1em;
+  }
+
+  .skill-item {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+
+  /* 貢献・出版などのセクション調整 */
+  section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  section h3 {
+    font-size: 1.2em;
+  }
+
+  section ul {
+    margin-left: 15px;
+  }
+
+  .small-text {
+    font-size: 0.8em;
+  }
+
+  section p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  /* テーブル全体をブロック要素に変更して縦並びに */
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  /* テーブルヘッダーを非表示に */
+  thead {
+    display: none;
+  }
+
+  /* 各行をカード形式にスタイリング */
+  tr {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  /* 各セルをブロック要素に */
+  td {
+    /* セル内の内容を左側に寄せるための余白を確保 */
+    position: relative;
+    padding-left: 50%;
+    margin-bottom: 10px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* 各セルの疑似要素で見出しを表示 */
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  /* 最後のセルのボーダーを解除 */
+  td:last-child {
+    border-bottom: none;
   }
 }
