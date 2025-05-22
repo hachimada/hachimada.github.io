@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nao Yamada</title>
+    <title>hachimada</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Font Awesome CDN -->
     <link
@@ -17,16 +17,15 @@
   <body>
     <div class="top">
       <div class="profile-picture">
-        <img src="images/me.jpg" alt="Nao Yamadaの写真" />
+        <img src="images/me.jpg" alt="hachimadaの写真" />
       </div>
 
       <div class="description">
-        <h1>Nao Yamada</h1>
+        <h1>hachimada</h1>
         <p id="introduction">
           システムエンジニアリング、AI、データサイエンス、ロボティクス、などの分野に興味があります。
           大学院在学中は、ロボティクスとAIの分野で、グラフニューラルネットワークを用いた人間の状態認識モデルの研究を行いました。
-          SaaS企業でバックエンドエンジニアとして主にJavaを使ったwebアプリの開発をした後、機械学習エンジニアとして、画像系の識別AIモデルの開発を行っています。
-          生成系AIにも興味があり勉強中です。
+          SaaS企業でバックエンドエンジニアとして主にJavaを使ったwebアプリの開発をした後、機械学習エンジニアとして、画像系の識別AIモデルの開発やLLMを用いたプロジェクトに従事しています。
         </p>
       </div>
     </div>
@@ -69,21 +68,22 @@
         </thead>
         <tbody>
           <tr>
+            <td>LLM合成データ作成</td>
+            <td>
+              <ul>
+                <li>特定のプログラミング言語、特定ドメインのマルチターン会話に関するInstruction Tuning用の合成データ作成プロジェクトを担当</li>
+                <li>データの質と多様性を担保するために、LLMのユースケースや要件をドメインエキスパートやLLMのプロバイダーと整理</li>
+                <li>OSS-Instruct, SelfCodeAlign, Metacognitive Promptingなどをベースに合成パイプラインを整備</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
             <td>図面記号検出AIモデル開発</td>
             <td>
               <ul>
-                <li>図面中の記号を検出するためのモデル（物体検出）を開発。</li>
+                <li>図面中の記号を検出するための物体検出モデルを開発(YOLOX)</li>
                 <li>モデル開発では学習、評価、レポート作成、レポーティングを担当。</li>
                 <li>クラスの偏りやデータのドメイン的な特徴を考慮して独自の前処理やデータ拡張を実施することでベースラインモデルからの精度向上を実現した。</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Python</li>
-                <li>Pytorch</li>
-                <li>YOLOX</li>
-                <li>VSCode</li>
-                <li>GitHub</li>
               </ul>
             </td>
           </tr>
@@ -97,15 +97,6 @@
                 <li>FastAPIを使って、学習が完了したモデルの推論用API開発も担当した。</li>
               </ul>
             </td>
-            <td>
-              <ul>
-                <li>Python</li>
-                <li>Pytorch</li>
-                <li>FastAPI</li>
-                <li>Pycharm</li>
-                <li>GitHub</li>
-              </ul>
-            </td>
           </tr>
           <tr>
             <td>バッチ処理ライブラリの独自実装への置き換え</td>
@@ -113,15 +104,6 @@
               <ul>
                 <li>Spring Batchで行われていたバッチ処理の独自実装への置き換えを担当。</li>
                 <li>マルチスレッドや複雑なトランザクション処理が絡んでいたため、既存の挙動との比較を慎重に行いながら詳細設計、開発、テストを実施した。</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>Spring Batch</li>
-                <li>IntelliJ</li>
-                <li>GitHub</li>
               </ul>
             </td>
           </tr>
@@ -134,15 +116,6 @@
                 <li>Multi part uploadでは最終的にzipファイルが完成するように部分的なデータをスタックしていく必要があり、zipの仕様に従って部分的なデータ生成する処理の実現が開発のポイントとなった。</li>
               </ul>
             </td>
-            <td>
-              <ul>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>AWS S3</li>
-                <li>IntelliJ</li>
-                <li>GitHub</li>
-              </ul>
-            </td>
           </tr>
           <tr>
             <td>他システムとの連携のためのAPI開発</td>
@@ -150,14 +123,6 @@
               <ul>
                 <li>別システムから呼び出されるAPIの設計・実装・テストを担当。</li>
                 <li>呼び出し側の要件を考慮し、モックを活用した早期テスト環境の提供や信頼性向上に努めた。</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>IntelliJ</li>
-                <li>GitLab</li>
               </ul>
             </td>
           </tr>
@@ -196,7 +161,7 @@
 
         <div class="skill-category database">
           <i class="fas fa-database"></i>
-          <h3>データベース・ミドルウェア</h3>
+          <h3>Database / Middleware</h3>
           <div class="skills-list">
             <p class="skill-item">PostgreSQL</li>
             <p class="skill-item">Redis</li>
@@ -206,7 +171,7 @@
 
         <div class="skill-category version-control">
           <i class="fas fa-code-branch"></i>
-          <h3>バージョン管理・コンテナ</h3>
+          <h3>Development Tools</h3>
           <div class="skills-list">
             <p class="skill-item">GitLab</p>
             <p class="skill-item">GitHub</p>
@@ -216,10 +181,19 @@
 
         <div class="skill-category cicd">
           <i class="fas fa-cogs"></i>
-          <h3>CI/CDツール</h3>
+          <h3>CI/CD</h3>
           <div class="skills-list">
             <p class="skill-item">GitLab CI</p>
             <p class="skill-item">GitHub Actions</p>
+          </div>
+        </div>
+
+        <div class="skill-category cloud">
+          <i class="fas fa-cogs"></i>
+          <h3>Cloud Service</h3>
+          <div class="skills-list">
+            <p class="skill-item">AWS(EC2, S3)</p>
+            <p class="skill-item">Google Cloud(GCS, GCE)</p>
           </div>
         </div>
       </div>
