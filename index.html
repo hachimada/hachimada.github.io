@@ -1,217 +1,220 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hachimada</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Font Awesome CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-pVnHcZQp2twLxLQK1gBFePjKzI7p5OjG2xUJg/0VQ+E3vv7Sp5eK9b8WZ2JsYQGk5Bd/3bg+U2h0jBbEX8bOqA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <div class="top">
-      <div class="profile-picture">
-        <img src="images/me.jpg" alt="hachimadaの写真" />
-      </div>
 
-      <div class="description">
-        <h1>hachimada</h1>
-        <p id="introduction">
-          システムエンジニアリング、AI、データサイエンス、ロボティクス、などの分野に興味があります。
-          大学院在学中は、ロボティクスとAIの分野で、グラフニューラルネットワークを用いた人間の状態認識モデルの研究を行いました。
-          SaaS企業でバックエンドエンジニアとして主にJavaを使ったwebアプリの開発をした後、機械学習エンジニアとして、画像系の識別AIモデルの開発やLLMを用いたプロジェクトに従事しています。
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hachimada | Profile</title>
+
+  <!-- Font & Icon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Projects section: single-column layout */
+    .grid.cards {
+      grid-template-columns: 1fr;
+    }
+
+    /* Link colors */
+    a {
+      color: var(--clr-primary);
+      transition: color .3s;
+    }
+
+    [data-theme="dark"] a {
+      color: #8ab3ff;
+    }
+
+    /* 明るめブルーでコントラスト確保 */
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner container">
+      <h1 class="header__logo">hachimada</h1>
+      <nav class="header__nav">
+        <button id="themeToggle" aria-label="テーマ切替"><i class="fas fa-moon"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero / About -->
+    <section class="hero">
+      <img src="images/me.jpg" alt="hachimada の写真" class="hero__avatar">
+      <div class="hero__text">
+        <p>
+          機械学習エンジニアとして、画像認識や LLM 領域のプロジェクトに従事<br>
+          ロボティクス&AI領域でグラフニューラルネットワークを用いた人間状態認識を研究した後、<br>
+          SaaS 企業でWebアプリケーションのバックエンド開発を経て現在に至る<br>
+          システムエンジニアリング、AI、データサイエンス、ロボティクス、などが興味領域
         </p>
       </div>
-    </div>
-
-    <section>
-      <h2>Education & Work History</h2>
-      <div class="work-history">
-        <div class="history">
-          <p class="year">Feb 2024</p>
-          <p class="work">Machine Learning Engineer</p>
-        </div>
-        <div class="history">
-          <p class="year">Apr 2022</p>
-          <p class="work">Web Application Backend Engineer</p>
-        </div>
-        <div class="history">
-          <p class="year">Mar 2022</p>
-          <p class="work">
-            Master of Engineering in Mechanical System
-          </p>
-        </div>
-        <div class="history">
-          <p class="year">Mar 2020</p>
-          <p class="work">
-            Bachelor of Engineering in Mechanical System
-          </p>
-        </div>
-      </div>
     </section>
 
+    <!-- Timeline -->
     <section>
-      <h2>Projects</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>概要</th>
-            <th>詳細</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>LLM合成データ作成</td>
-            <td>
-              <ul>
-                <li>特定のプログラミング言語、特定ドメインのマルチターン会話に関するInstruction Tuning用の合成データ作成プロジェクトを担当</li>
-                <li>データの質と多様性を担保するために、LLMのユースケースや要件をドメインエキスパートやLLMのプロバイダーと整理</li>
-                <li>OSS-Instruct, SelfCodeAlign, Metacognitive Promptingなどをベースに合成パイプラインを整備</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>図面記号検出AIモデル開発</td>
-            <td>
-              <ul>
-                <li>図面中の記号を検出するための物体検出モデルを開発(YOLOX)</li>
-                <li>モデル開発では学習、評価、レポート作成、レポーティングを担当。</li>
-                <li>クラスの偏りやデータのドメイン的な特徴を考慮して独自の前処理やデータ拡張を実施することでベースラインモデルからの精度向上を実現した。</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>肌異常の検出AIモデル&API開発</td>
-            <td>
-              <ul>
-                <li>顔の肌異常を検出するためのモデル（セマンティックセグメンテーション）の精度向上に取り組んだ。</li>
-                <li>モデル開発ではデータセットのアノテーション基準の策定、学習、評価、レポート作成、レポーティングまで一貫して担当。</li>
-                <li>Data-centricなアプローチを取り、モデルのチューニングとアノテーションの改善を繰り返すことで精度向上に成功した。</li>
-                <li>FastAPIを使って、学習が完了したモデルの推論用API開発も担当した。</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>バッチ処理ライブラリの独自実装への置き換え</td>
-            <td>
-              <ul>
-                <li>Spring Batchで行われていたバッチ処理の独自実装への置き換えを担当。</li>
-                <li>マルチスレッドや複雑なトランザクション処理が絡んでいたため、既存の挙動との比較を慎重に行いながら詳細設計、開発、テストを実施した。</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>大容量のPDFファイルを生成&ダウンロード機能の開発</td>
-            <td>
-              <ul>
-                <li>大量のユーザーデータをPDFに変換しダウンロードする機能をメモリ効率を重視して開発。</li>
-                <li>サーバーでzipファイルのデータを部分的に生成しながらAWS S3のmulti part uploadで順次アップロードすることで、サーバーのメモリ消費を抑えながら大容量データの処理を実現した。</li>
-                <li>Multi part uploadでは最終的にzipファイルが完成するように部分的なデータをスタックしていく必要があり、zipの仕様に従って部分的なデータ生成する処理の実現が開発のポイントとなった。</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>他システムとの連携のためのAPI開発</td>
-            <td>
-              <ul>
-                <li>別システムから呼び出されるAPIの設計・実装・テストを担当。</li>
-                <li>呼び出し側の要件を考慮し、モックを活用した早期テスト環境の提供や信頼性向上に努めた。</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>Technical Skills</h2>
-      <div class="skills-container">
-        <div class="skill-category java">
-          <i class="fab fa-java"></i>
-          <h3>Java</h3>
-          <div class="skills-list">
-            <p class="skill-item">Spring Boot</p>
-            <p class="skill-item">Spring Batch</p>
-            <p class="skill-item">JUnit5</p>
-            <p class="skill-item">Gradle</p>
-          </div>
-        </div>
-
-        <div class="skill-category python">
-          <i class="fab fa-python"></i>
-          <h3>Python</h3>
-          <div class="skills-list">
-            <p class="skill-item">Django</p>
-            <p class="skill-item">FastAPI</p>
-            <p class="skill-item">SQLAlchemy</p>
-            <p class="skill-item">Alembic</p>
-            <p class="skill-item">pytest</p>
-            <p class="skill-item">Poetry</p>
-            <p class="skill-item">PyTorch</p>
-            <p class="skill-item">scikit-learn</p>
-          </div>
-        </div>
-
-        <div class="skill-category database">
-          <i class="fas fa-database"></i>
-          <h3>Database / Middleware</h3>
-          <div class="skills-list">
-            <p class="skill-item">PostgreSQL</li>
-            <p class="skill-item">Redis</li>
-            <p class="skill-item">ROS</li>
-          </div>
-        </div>
-
-        <div class="skill-category version-control">
-          <i class="fas fa-code-branch"></i>
-          <h3>Development Tools</h3>
-          <div class="skills-list">
-            <p class="skill-item">GitLab</p>
-            <p class="skill-item">GitHub</p>
-            <p class="skill-item">Docker</p>
-          </div>
-        </div>
-
-        <div class="skill-category cicd">
-          <i class="fas fa-cogs"></i>
-          <h3>CI/CD</h3>
-          <div class="skills-list">
-            <p class="skill-item">GitLab CI</p>
-            <p class="skill-item">GitHub Actions</p>
-          </div>
-        </div>
-
-        <div class="skill-category cloud">
-          <i class="fas fa-cogs"></i>
-          <h3>Cloud Service</h3>
-          <div class="skills-list">
-            <p class="skill-item">AWS(EC2, S3)</p>
-            <p class="skill-item">Google Cloud(GCS, GCE)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Contribution</h2>
-      <h3>Published</h3>
-      <ul>
-        <li>
-          <a href="https://speakerdeck.com/hachimada">Speaker Deck</a>
-        </li>
-        <li>
-          <a href="https://zenn.dev/hachimada">Zenn</a>
-        </li>
+      <h2 class="section-title">Education &amp; Work History</h2>
+      <ul class="timeline">
+        <li class="timeline__item"><time>Feb&nbsp;2024</time> Machine Learning Engineer</li>
+        <li class="timeline__item"><time>Apr&nbsp;2022</time> Web&nbsp;Application&nbsp;Backend Engineer</li>
+        <li class="timeline__item"><time>Mar&nbsp;2022</time>
+          Master&nbsp;of&nbsp;Engineering&nbsp;in&nbsp;Mechanical&nbsp;System</li>
+        <li class="timeline__item"><time>Mar&nbsp;2020</time>
+          Bachelor&nbsp;of&nbsp;Engineering&nbsp;in&nbsp;Mechanical&nbsp;System</li>
       </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section-title">Projects</h2>
+      <div class="grid cards">
+        <!-- LLM 合成データ作成 -->
+        <article class="card">
+          <header class="card__header">
+            <h3 class="card__title">LLM合成データ作成</h3>
+            <button class="card__toggle" aria-label="詳細を開閉"><i class="fas fa-chevron-down"></i></button>
+          </header>
+          <ul class="card__body">
+            <li>特定のプログラミング言語、特定ドメインのマルチターン会話に関するInstruction Tuning用の合成データ作成プロジェクトを担当</li>
+            <li>データの質と多様性を担保するために、LLMのユースケースや要件をドメインエキスパートやLLMのプロバイダーと整理</li>
+            <li>OSS-Instruct, SelfCodeAlign, Metacognitive Promptingなどをベースに合成パイプラインを整備</li>
+          </ul>
+        </article>
+
+        <!-- 図面記号検出 -->
+        <article class="card">
+          <header class="card__header">
+            <h3 class="card__title">図面記号検出 AI モデル開発</h3>
+            <button class="card__toggle" aria-label="詳細を開閉"><i class="fas fa-chevron-down"></i></button>
+          </header>
+          <ul class="card__body">
+            <li>図面中の記号を検出する物体検出モデルを YOLOX で開発</li>
+            <li>学習・評価・レポート作成を担当</li>
+            <li>クラス不均衡とドメイン特性を考慮した前処理／データ拡張でベースラインより精度を大幅向上</li>
+          </ul>
+        </article>
+
+        <!-- 肌異常検出 -->
+        <article class="card">
+          <header class="card__header">
+            <h3 class="card__title">肌異常の検出 AI モデル & API 開発</h3>
+            <button class="card__toggle" aria-label="詳細を開閉"><i class="fas fa-chevron-down"></i></button>
+          </header>
+          <ul class="card__body">
+            <li>顔の肌異常を検出するセマンティックセグメンテーションモデルの精度向上を担当</li>
+            <li>アノテーション基準策定から学習・評価・レポーティングまで一貫して実施</li>
+            <li>Data‑centric アプローチでチューニングとアノテーション改善を反復し精度向上</li>
+            <li>FastAPI で学習済みモデルの推論 API を実装</li>
+          </ul>
+        </article>
+
+        <!-- バッチ処理ライブラリ置き換え -->
+        <article class="card">
+          <header class="card__header">
+            <h3 class="card__title">バッチ処理ライブラリの独自実装への置き換え</h3>
+            <button class="card__toggle" aria-label="詳細を開閉"><i class="fas fa-chevron-down"></i></button>
+          </header>
+          <ul class="card__body">
+            <li>Spring&nbsp;Batch で構築されていたバッチ処理を独自実装にリプレース</li>
+            <li>マルチスレッドや複雑なトランザクションが絡むため既存挙動を精査しながら詳細設計・開発・テストを実施</li>
+          </ul>
+        </article>
+
+        <!-- 大容量 PDF 生成 -->
+        <article class="card">
+          <header class="card__header">
+            <h3 class="card__title">大容量 PDF 生成 & ダウンロード機能</h3>
+            <button class="card__toggle" aria-label="詳細を開閉"><i class="fas fa-chevron-down"></i></button>
+          </header>
+          <ul class="card__body">
+            <li>大量ユーザーデータを PDF 生成/ダウンロードする機能をメモリ効率重視で開発</li>
+            <li>サーバーでzipファイルのデータを部分的に生成しながらAWS S3のmulti part uploadで順次アップロードすることで、サーバーのメモリ消費を抑えながら大容量データの処理を実現</li>
+            <li>Multi part uploadでは最終的にzipファイルが完成するように部分的なデータをスタックしていく必要があり、zipの仕様に従って部分的なデータ生成する処理の実現が開発のポイント</li>
+            <li>S3のデータをストリーミングでダウンロードするAPIを実装</li>
+          </ul>
+        </article>
+
+        <!-- API 連携開発 -->
+        <article class="card">
+          <header class="card__header">
+            <h3 class="card__title">他システム連携 API 開発</h3>
+            <button class="card__toggle" aria-label="詳細を開閉"><i class="fas fa-chevron-down"></i></button>
+          </header>
+          <ul class="card__body">
+            <li>外部システムから呼び出される API の設計・実装・テストを担当</li>
+            <li>モック API による早期検証環境を提供し信頼性を向上</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="grid skills">
+        <!-- Java -->
+        <div class="skill">
+          <i class="fab fa-java skill__icon" style="--clr:#f89820"></i>
+          <h3 class="skill__title">Java</h3>
+          <p class="skill__tags">Spring&nbsp;Boot&nbsp;/ Spring&nbsp;Batch&nbsp;/ JUnit5&nbsp;/ Gradle</p>
+        </div>
+        <!-- Python -->
+        <div class="skill">
+          <i class="fab fa-python skill__icon" style="--clr:#4caf50"></i>
+          <h3 class="skill__title">Python</h3>
+          <p class="skill__tags">Django&nbsp;/ FastAPI&nbsp;/ SQLAlchemy&nbsp;/ Alembic&nbsp;/ pytest&nbsp;/
+            Poetry&nbsp;/ PyTorch&nbsp;/ scikit‑learn</p>
+        </div>
+        <!-- DB & Middleware -->
+        <div class="skill">
+          <i class="fas fa-database skill__icon" style="--clr:#6a1b9a"></i>
+          <h3 class="skill__title">Database &amp; Middleware</h3>
+          <p class="skill__tags">PostgreSQL&nbsp;/ Redis&nbsp;/ ROS</p>
+        </div>
+        <!-- Dev Tools -->
+        <div class="skill">
+          <i class="fas fa-code-branch skill__icon" style="--clr:#d32f2f"></i>
+          <h3 class="skill__title">Development Tools</h3>
+          <p class="skill__tags">GitLab&nbsp;/ GitHub&nbsp;/ Docker</p>
+        </div>
+        <!-- CI/CD -->
+        <div class="skill">
+          <i class="fas fa-cogs skill__icon" style="--clr:#1976d2"></i>
+          <h3 class="skill__title">CI/CD</h3>
+          <p class="skill__tags">GitLab&nbsp;CI&nbsp;/ GitHub&nbsp;Actions</p>
+        </div>
+        <!-- Cloud -->
+        <div class="skill">
+          <i class="fas fa-cloud skill__icon" style="--clr:#ff9800"></i>
+          <h3 class="skill__title">Cloud Service</h3>
+          <p class="skill__tags">AWS&nbsp;(EC2, S3)&nbsp;/ Google&nbsp;Cloud&nbsp;(GCS, GCE)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contribution -->
+    <section>
+      <h2 class="section-title">Contribution</h2>
+      <h3>Published</h3>
+      <ul class="list">
+        <li><a href="https://speakerdeck.com/hachimada">Speaker&nbsp;Deck</a></li>
+        <li><a href="https://zenn.dev/hachimada">Zenn</a></li>
+      </ul>
+
       <h3>Research</h3>
-      <ul>
+      <ul class="list">
         <li>
           <a href="https://ijain.org/index.php/IJAIN/article/view/903/0">
             An efficient activity recognition for homecare robots from multi-modal communication dataset
@@ -230,25 +233,27 @@
         </li>
         <li>
           <a href="https://ieeexplore.ieee.org/document/9308289">
-            Interactive adaptation of Hand-over Motion by a Robot Partner for
-            Comfort of receiving
+            Interactive adaptation of Hand‑over Motion by a Robot Partner for Comfort of receiving
           </a>
         </li>
       </ul>
     </section>
 
+    <!-- Contact -->
     <section>
-      <h2>Contact Information</h2>
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/nao-yamada-94738429a/"
-          >nao-yamada</a
-        >
-      </p>
-      <p>
-        X (Twitter):
-        <a href="https://twitter.com/hachi_mada">@hachi_mada</a>
-      </p>
+      <h2 class="section-title">Contact</h2>
+      <ul class="list">
+        <li>LinkedIn&nbsp;:&nbsp;<a href="https://www.linkedin.com/in/nao-yamada-94738429a/">nao-yamada</a></li>
+        <li>X&nbsp;(Twitter)&nbsp;:&nbsp;<a href="https://twitter.com/hachi_mada">@hachi_mada</a></li>
+      </ul>
     </section>
-  </body>
+  </main>
+
+  <footer class="footer">
+    <small>© hachimada 2025</small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
